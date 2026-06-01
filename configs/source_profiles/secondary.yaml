@@ -1,0 +1,21 @@
+name: secondary
+description: "Дополнительный формат выгрузки (для демонстрации)"
+column_aliases:
+  SampleDate:
+    - "Дата"
+  FullPointCode:
+    - "Код точки"
+  PointType_Name:
+    - "Тип точки"
+  Indicator:
+    - "Гигиенический показатель"
+  Normative:
+    - "Норматив"
+  ResultValueText:
+    - "Результат исследования"
+  DetectionLimitLowerText:
+    - "нпо"
+  MethodErrorText:
+    - "Ошибка метода определения"
+  NormativeDocument:
+    - "Нормативная документация"

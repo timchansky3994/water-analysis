@@ -1,0 +1,7 @@
+[client]
+# Hide developer toolbar so "Clear cache" button and its keyboard shortcut are unavailable.
+toolbarMode = "minimal"
+
+[server]
+# Do not open a browser tab automatically on every run.
+headless = false
