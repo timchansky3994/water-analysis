@@ -1,0 +1,64 @@
+project:
+  name: water_analysis
+
+data:
+  primary_dataset: data/raw/main.csv
+  default_encoding: utf-8-sig
+  default_csv_delimiter: ";"
+
+preprocessing:
+  canonical_format: long
+  default_pivot_level: sample_point_level
+  preserve_censoring_metadata: true
+  drinking_water_point_types:
+    - "10110"
+    - "10150"
+
+reporting:
+  outputs_dir: outputs
+  reports_dir: reports
+  plots_dpi: 150
+  top_correlations: 10
+  heatmap_max_features: 20
+  timestamp_format: "%Y%m%d_%H%M%S"
+
+readiness:
+  min_target_observations: 30
+  min_shared_samples: 20
+  max_missing_ratio: 0.6
+  heavy_censoring_ratio: 0.5
+  min_eligible_predictors: 2
+
+seasonality:
+  analysis_granularity: season   # season | month — for the analytical diagnostic layer
+  min_group_size: 5
+
+modeling:
+  test_size: 0.2
+  min_train_size: 20
+  min_target_correlation: 0.3
+  significance_alpha: 0.05
+  max_features: 5
+  multicollinearity_threshold: 0.85
+  selection_mode: auto
+  combined_score_weight_holdout: 0.4
+  combined_score_weight_backtest: 0.6
+  seasonal_feature: none         # none | season | month — optional seasonal feature for models
+  default_models:
+    - bayesian_ridge
+    - ridge
+    - elastic_net
+    - huber
+    - random_forest
+    - hist_gradient_boosting
+
+correlation:
+  methods:
+    - spearman
+    - pearson
+  min_shared_samples: 20
+
+inference:
+  min_observed_features: 2
+  min_feature_coverage: 0.5
+  allow_missing_feature_columns: false

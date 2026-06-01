@@ -1,0 +1,17 @@
+/data/
+/tests/real_data/
+/src/water_analysis.egg-info/
+/reports/
+/outputs/
+/legacy/
+/.venv/
+/.idea/
+/.git_old/
+__pycache__/
+*/__pycache__/
+*/__pycache__/*
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+water_data_snippet.*

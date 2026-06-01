@@ -1,0 +1,42 @@
+name: default
+description: "Стандартный формат выгрузки результатов лабораторных исследований"
+column_aliases:
+  SampleDate:
+    - "Дата проведения исследования"
+    - "Date"
+  PointType_Name:
+    - "Тип точки"
+    - "PointType_Name"
+  FullPointCode:
+    - "Код точки"
+    - "Code"
+  Indicator:
+    - "Гигиенический показатель"
+    - "Indicator"
+  Normative:
+    - "Норматив"
+    - "Normative"
+  RawValueText:
+    - "Строчное значение"
+    - "Value_Text"
+  ResultValueText:
+    - "Результат исследования"
+    - "Value"
+  DetectionLimitLowerText:
+    - "Нижний предел обнаружения"
+    - "DetectionLimitLower"
+  DetectionLimitUpperText:
+    - "Верхний предел обнаружения"
+    - "DetectionLimitUpper"
+  MethodErrorText:
+    - "Ошибка метода определения"
+    - "MethodError"
+  NormativeDocument:
+    - "Нормативная документация"
+    - "NormativeDocument"
+  ResearchGoal:
+    - "Цели исследований"
+    - "ResearchGoal"
+  ComplianceText:
+    - "Соотв. ПДК"
+    - "Compliance"
